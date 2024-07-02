@@ -50,6 +50,7 @@ Create an `index.html` file with the following content and place it in the `htdo
 </body>
 </html>
 ```
+![8](img/8.PNG)
 
 ### Step 2: Set Up the Backend
 Create a `command.php` file with the following content and place it in the `htdocs` directory of your XAMPP installation:
