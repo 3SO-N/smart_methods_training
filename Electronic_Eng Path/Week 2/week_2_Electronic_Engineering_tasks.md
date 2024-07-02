@@ -60,15 +60,23 @@ In this task, we will create a circuit on Tinkercad that includes 6 servo motors
 1. **Create a New Circuit**:
     - Go to [Tinkercad](https://www.tinkercad.com/).
     - Create a new circuit project.
+
+![1](img/1.PNG)
+
 2. **Add Components**:
     - Add an Arduino Uno to the workspace.
     - Add 6 servo motors.
     - Connect the signal pins of the servos to digital pins on the Arduino (e.g., D2 to D7).
     - Connect the power and ground pins of the servos to the Arduino.
+
+![2](img/2.PNG)
+
 3. **Program the Arduino**:
     - Write the code to control the servos.
+![3](img/3.gif)
 
 ### Example Code
+
 ```cpp
 #include <Servo.h>
 
