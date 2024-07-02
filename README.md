@@ -1,1 +1,0 @@
-# smart_methods_tr
