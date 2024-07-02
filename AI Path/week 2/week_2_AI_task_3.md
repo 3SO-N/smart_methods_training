@@ -1,4 +1,3 @@
-
 # Week 2 AI Task 3: Use ROS1 Bridge to Print Topic from ROS1 to ROS2
 
 ## Table of Contents
