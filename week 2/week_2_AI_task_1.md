@@ -1,4 +1,3 @@
-
 # Week 2 AI Task 1: Install ROS Noetic and ROS Foxy
 
 ## Table of Contents
