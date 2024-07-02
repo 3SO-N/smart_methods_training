@@ -30,7 +30,7 @@ source /opt/ros/foxy/setup.bash
 sudo apt update
 sudo apt install ros-foxy-ros1-bridge
 ```
-
+![9](img/9.PNG)
 ### Step 3: Build the `ros1_bridge` Package
 If you are using a workspace, make sure to build the bridge from source:
 ```sh
@@ -55,6 +55,7 @@ Open another terminal and start the ROS2 daemon:
 ```sh
 ros2 daemon start
 ```
+![10](img/10.PNG)
 
 ### Step 3: Run the ROS1 Bridge
 In a new terminal, run the `ros1_bridge`:
@@ -84,6 +85,7 @@ Open a new terminal and run:
 ```sh
 ros2 topic echo /turtle1/cmd_vel
 ```
+![11](img/11.PNG)
 
 You should see the messages published in ROS1 being echoed in ROS2.
 
