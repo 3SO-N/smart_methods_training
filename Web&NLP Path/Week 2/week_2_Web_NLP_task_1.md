@@ -83,6 +83,9 @@ $conn->close();
 ?>
 ```
 
+![2](img/2.PNG)
+
+
 ## Creating the Database
 Create a MySQL database using phpMyAdmin or the MySQL command line.
 
@@ -90,6 +93,11 @@ Create a MySQL database using phpMyAdmin or the MySQL command line.
 ```sql
 CREATE DATABASE robot_commands;
 ```
+![4](img/4.PNG)
+
+### OR 
+
+![3](img/3.PNG)
 
 ### Step 2: Create the Table
 ```sql
@@ -101,6 +109,11 @@ CREATE TABLE commands (
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 ```
+
+![5](img/5.PNG)
+
+![6](img/6.PNG)
+
 
 ## Connecting the Web Page to the Database
 The `sendCommand` function in the `index.html` file sends POST requests to the `command.php` endpoint, which stores the commands in the MySQL database.
