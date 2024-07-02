@@ -72,7 +72,7 @@ $conn->close();
 ```
 
 
-![10](img/10.gif)
+![11](img/11.gif)
 
 ### Conclusion
 This task has provided a complete setup for displaying the last recorded command of the robot through a web page by fetching the data from a MySQL database using XAMPP. By following these steps, you should have a functional web interface for monitoring robot commands.
