@@ -35,7 +35,10 @@ Create a `display.html` file with the following content and place it in the `htd
     </script>
 </body>
 </html>
+
 ```
+![10](img/10.PNG)
+
 
 #### Step 2: Create the PHP Backend (fetch_command.php)
 Create a `fetch_command.php` file with the following content and place it in the `htdocs` directory of your XAMPP installation:
@@ -67,6 +70,9 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 ```
+
+
+![10](img/10.gif)
 
 ### Conclusion
 This task has provided a complete setup for displaying the last recorded command of the robot through a web page by fetching the data from a MySQL database using XAMPP. By following these steps, you should have a functional web interface for monitoring robot commands.
