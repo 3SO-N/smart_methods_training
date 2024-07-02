@@ -1,37 +1,23 @@
 
-# Week 2 Web and NLP Task 2: Creating a Web Page to Display Stored Data (Last Value)
+## Task 2: Creating a Web Page to Display Stored Data (Last Value)
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Prerequisites](#prerequisites)
-3. [Setting Up the Web Page](#setting-up-the-web-page)
-4. [Creating the Backend to Fetch Data](#creating-the-backend-to-fetch-data)
-5. [Displaying Data on the Web Page](#displaying-data-on-the-web-page)
-6. [Conclusion](#conclusion)
+### Setting Up the Display Page
 
-## Introduction
-This task involves creating a web page that displays the last recorded command direction from the database. This will help you understand how to fetch and display data from a database using a web application.
-
-## Prerequisites
-- Basic understanding of HTML, CSS, and JavaScript
-- Knowledge of PHP and MySQL
-- XAMPP installed on your machine
-
-## Setting Up the Web Page
-
-### Step 1: Create the HTML File
-Create an `display.html` file with the following content and place it in the `htdocs` directory of your XAMPP installation:
+#### Step 1: Create the HTML File (display.html)
+Create a `display.html` file with the following content and place it in the `htdocs` directory of your XAMPP installation:
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot Command Display</title>
+    <title>Last Robot Command</title>
 </head>
 <body>
     <h1>Last Robot Command</h1>
     <div id="lastCommand">Loading...</div>
+    <br>
+    <a href="index.html">Back to Control</a> <!-- Link to go back to index.html for control -->
 
     <script>
         function fetchLastCommand() {
@@ -51,7 +37,7 @@ Create an `display.html` file with the following content and place it in the `ht
 </html>
 ```
 
-## Creating the Backend to Fetch Data
+#### Step 2: Create the PHP Backend (fetch_command.php)
 Create a `fetch_command.php` file with the following content and place it in the `htdocs` directory of your XAMPP installation:
 ```php
 <?php
@@ -82,8 +68,5 @@ $conn->close();
 ?>
 ```
 
-## Displaying Data on the Web Page
-The JavaScript function `fetchLastCommand` in the `display.html` file sends a GET request to the `fetch_command.php` endpoint, which retrieves the last command from the MySQL database and returns it as a JSON response. This data is then displayed in the `lastCommand` div.
-
-## Conclusion
-This document covered the steps to create a web page that fetches and displays the last recorded command direction from a database using XAMPP. By following these instructions, you should have a functional web interface that displays the most recent command issued to your robot.
+### Conclusion
+This task has provided a complete setup for displaying the last recorded command of the robot through a web page by fetching the data from a MySQL database using XAMPP. By following these steps, you should have a functional web interface for monitoring robot commands.
