@@ -74,14 +74,14 @@ In this task, we will create a circuit on Tinkercad that includes 6 servo motors
     - Connect the outer pins of the potentiometers to 5V and GND on the Arduino.
   
 
-![2](img/2.PNG)
+![2](img/4.PNG)
 
 
 ## Program the Arduino
 Write the code to control the servo motors based on the potentiometer values.
 
 
-![3](img/3.gif)
+![3](img/5.gif)
 
 ```cpp
 #include <Servo.h>
