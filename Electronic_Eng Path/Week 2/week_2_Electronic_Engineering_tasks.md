@@ -51,31 +51,37 @@ while True:
 ### Conclusion
 This algorithm provides a basic structure to control 6 servo motors to create a walking motion for a robot. The sequence of movements can be adjusted to refine the walking gait.
 
-## Task 2: Connect and Program a Circuit with 6 Servo Motors on Tinkercad
+# Task 2: Connect and Program a Circuit with 6 Servo Motors and 6 Potentiometers on Tinkercad
 
-### Introduction
-In this task, we will create a circuit on Tinkercad that includes 6 servo motors and write a program to control them.
+## Introduction
+In this task, we will create a circuit on Tinkercad that includes 6 servo motors and 6 potentiometers and write a program to control them.
 
-### Steps to Create the Circuit
+## Steps to Create the Circuit
 1. **Create a New Circuit**:
     - Go to [Tinkercad](https://www.tinkercad.com/).
     - Create a new circuit project.
-
+  
+   
 ![1](img/1.PNG)
 
 2. **Add Components**:
     - Add an Arduino Uno to the workspace.
     - Add 6 servo motors.
+    - Add 6 potentiometers.
     - Connect the signal pins of the servos to digital pins on the Arduino (e.g., D2 to D7).
     - Connect the power and ground pins of the servos to the Arduino.
+    - Connect the middle pin of each potentiometer to analog pins on the Arduino (e.g., A0 to A5).
+    - Connect the outer pins of the potentiometers to 5V and GND on the Arduino.
+  
 
 ![2](img/2.PNG)
 
-3. **Program the Arduino**:
-    - Write the code to control the servos.
-![3](img/3.gif)
 
-### Example Code
+## Program the Arduino
+Write the code to control the servo motors based on the potentiometer values.
+
+
+![3](img/3.gif)
 
 ```cpp
 #include <Servo.h>
@@ -97,27 +103,30 @@ void setup() {
 }
 
 void loop() {
-  // Move servos to positions for step
-  servo1.write(45);
-  servo2.write(90);
-  servo3.write(135);
-  servo4.write(135);
-  servo5.write(90);
-  servo6.write(45);
-  delay(500);
+  int pot1 = analogRead(A0);
+  int pot2 = analogRead(A1);
+  int pot3 = analogRead(A2);
+  int pot4 = analogRead(A3);
+  int pot5 = analogRead(A4);
+  int pot6 = analogRead(A5);
 
-  // Alternate positions for next step
-  servo1.write(135);
-  servo2.write(90);
-  servo3.write(45);
-  servo4.write(45);
-  servo5.write(90);
-  servo6.write(135);
-  delay(500);
+  int angle1 = map(pot1, 0, 1023, 0, 180);
+  int angle2 = map(pot2, 0, 1023, 0, 180);
+  int angle3 = map(pot3, 0, 1023, 0, 180);
+  int angle4 = map(pot4, 0, 1023, 0, 180);
+  int angle5 = map(pot5, 0, 1023, 0, 180);
+  int angle6 = map(pot6, 0, 1023, 0, 180);
+
+  servo1.write(angle1);
+  servo2.write(angle2);
+  servo3.write(angle3);
+  servo4.write(angle4);
+  servo5.write(angle5);
+  servo6.write(angle6);
+
+  delay(50);
 }
 ```
 
-### Conclusion
-By following these steps, you can create a circuit with 6 servo motors on Tinkercad and program it to simulate a walking motion for a robot.
-
-
+## Conclusion
+By following these steps, you can create a circuit with 6 servo motors and 6 potentiometers on Tinkercad and program it to control the servo motors based on the potentiometer values.
