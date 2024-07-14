@@ -40,6 +40,9 @@ $ roslaunch robot_arm_pkg check_motors.launch
 
 This will launch the simulation of the robot arm, and you should be able to see it move according to the joint states.
 
+![1](img/1.gif)
+
+
 ## Part 2: Controlling the Robot Arm using Moveit and Kinematics
 
 ### Step 1: Launch the Moveit demo
@@ -50,6 +53,9 @@ $ roslaunch moveit_pkg demo.launch
 
 ### Step 2: Using RViz with Moveit
 Once the demo is launched, you can use RViz, a 3D visualization tool for ROS, to interact with the robot arm. You can plan motions and visualize the planned paths in RViz. 
+
+
+![2](img/2.gif)
 
 ### Step 3: Understanding Kinematics
 Kinematics allows you to control the robot arm by specifying the end effector's position and orientation. Moveit uses inverse kinematics to compute the required joint states to reach a specific end effector position. You can experiment with different end effector goals in RViz and see how the robot arm responds.
