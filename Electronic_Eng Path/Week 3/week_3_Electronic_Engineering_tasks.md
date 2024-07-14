@@ -45,13 +45,13 @@ void loop() {
   if (value == HIGH) {
     digitalWrite(led, HIGH);
     if (pirstate == LOW) {
-      Serial.println("Motion detected");
+      Serial.println("تم ألتقاط حركة");
       pirstate = HIGH;
     }
   } else {
     digitalWrite(led, LOW);
     if (pirstate == HIGH) {
-      Serial.println("Motion stopped");
+      Serial.println("الحركة توقفت");
       pirstate = LOW;
     }
   }
@@ -75,7 +75,11 @@ void loop() {
    - If motion is detected (`value == HIGH`), turn on the LED and print "Motion detected" if it was previously off.
    - If no motion is detected (`value == LOW`), turn off the LED and print "Motion stopped" if it was previously on.
 
+![2](img/2.gif)
+
+
+
 ### Simulation
 
 You can simulate this circuit using the Wokwi platform. Here is the link to the simulation: [Wokwi Simulation](https://wokwi.com/)
-
+![1](img/1.PNG)
